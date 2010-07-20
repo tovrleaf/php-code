@@ -3,8 +3,8 @@
  * Calculate array depth (dimension)
  *
  * Uses textual presentation of array instead of looping through it so there's
- * consern that if array has reference to itself function will loop infinite
- * in case of recursion.
+ * no consern that if array has reference to itself function will loop infinite
+ * (in case of recursion).
  *
  * @code
  * // returns 2
