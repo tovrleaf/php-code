@@ -6,7 +6,7 @@
  * <code>
  * // returns 2
  * echo array_depth(array(1, 2, array(2)));
- * <code>
+ * </code>
  */
 
 /**
@@ -21,13 +21,14 @@
  */
 function array_depth(array $arr)
 {
-    $depth = function (&$max)
-    {
-        return function($line) use (&$max)
-        {
+    $depth = function (&$max) {
+        return function($line) use (&$max) {
             $max = max(array($max, (strlen($line) - strlen(ltrim($line))) / 4));
         };
     };
+    // print_r returns formatted textual array presentation
+    // indented with 4 spaces
     array_map($depth($max), explode(PHP_EOL, print_r($arr, true)));
+    // [1,2] -> 1, [3,4] -> 2, ..., [N,N+1] -> (N+1)/2
     return ceil(($max - 1) / 2) + 1;
 }
