@@ -5,7 +5,7 @@
  *
  * <code>
  * // returns 2
- * echo array_depth(array(1, 2, array(2)));
+ * echo array_depth(array(1, 2, array(3)));
  * </code>
  */
 
