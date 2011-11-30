@@ -35,7 +35,7 @@
 * Takes array of objects and call user given method for all of them.
 * All values are placed in single dimension array.
 *
-* @param array $array Array of object
+* @param array $array Array of objects
 * @return array
 */
 function array_map_method(array $array, $method)
