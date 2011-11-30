@@ -4,7 +4,6 @@
  * @since Wes Nov 30 07:24:03 EEST 2011
  *
  * <code>
- * // returns 2
  * class Foo
  * {
  *     private $_id;
